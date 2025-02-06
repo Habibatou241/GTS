@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entête de GTS</title>
+    <link rel="stylesheet" href="/css/index.css">       <!--link with css file-->
+    <!-- Liens vers les fichiers CSS de Bootstrap -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body>
+
+    <header class="fixed bg-transparent z-30">
+        <nav class="">
+            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+                <div class="relative flex h-16 items-center justify-between">
+                    <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <!-- Mobile menu button-->
+                    <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="absolute -inset-0.5"></span>
+                        <span class="sr-only">Open main menu</span>
+                        <!--
+                        Icon when menu is closed.
+            
+                        Menu open: "hidden", Menu closed: "block"
+                        -->
+                        <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <!--
+                        Icon when menu is open.
+            
+                        Menu open: "block", Menu closed: "hidden"
+                        -->
+                        <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                    </div>
+                    <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+
+                        <!-- LOGO-->
+                    <div class="flex shrink-0 items-center">
+                        <img class="h-10 w-auto ml-20" src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\LOGO.png" alt="Your Company">
+                    </div>
+
+                    <!-- Nav bar-->
+                    <div class="hidden sm:ml-6 sm:block">
+                        <div class="flex space-x-4">
+
+                        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                        <a href="./index.html" class="rounded-md px-3 py-2 text-sm font-medium text-green-900 hover:bg-gray-700 hover:text-white">Accueil</a>
+                        <a href="./about.html" class="rounded-md px-3 py-2 text-sm font-medium text-green-900 hover:bg-gray-700 hover:text-white">A propos</a>
+                        <a href="./services.html" class="rounded-md px-3 py-2 text-sm font-medium text-red-900 hover:bg-gray-700 hover:text-white">Nos services</a>
+                        <a href="./contact.html" class="rounded-md px-3 py-2 text-sm font-medium text-green-900 hover:bg-gray-700 hover:text-white">Contact</a>
+                        </div>
+                    </div>
+                    </div>
+                    
+                        <!-- Bouton Decouvrez nos produits-->
+                    <div>
+                        <button type="button" class="bg-white-500 animate-pulse text-green-900 py-2 px-4 text-sm font-medium ml-85 border border-green-900 rounded hover:bg-red-700 hover:text-pink focus:ring-2 focus:ring-green-500 focus: ring-opacity-50">Decouvrez nos produits</button>
+                    </div>
+                    
+                    
+            
+                        <!--
+                        Dropdown menu, show/hide based on menu state.
+            
+                        Entering: "transition ease-out duration-100"
+                            From: "transform opacity-0 scale-95"
+                            To: "transform opacity-100 scale-100"
+                        Leaving: "transition ease-in duration-75"
+                            From: "transform opacity-100 scale-100"
+                            To: "transform opacity-0 scale-95"
+                        -->
+
+                </div>
+            </div>
+
+            
+        
+            <!-- Mobile menu, show/hide based on menu state. -->
+            <div class="sm:hidden" id="mobile-menu">
+            <div class="space-y-1 px-2 pt-2 pb-3">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a href="" class="block rounded-md px-3 py-2 text-base font-medium text-green-900 hover:bg-gray-700 hover:text-white">Accueil</a>
+                <a href="" class="block rounded-md px-3 py-2 text-base font-medium text-green-900 hover:bg-gray-700 hover:text-white">A propos</a>
+                <a href="" class="block rounded-md px-3 py-2 text-base font-medium text-green-900 hover:bg-gray-700 hover:text-white">Nos services</a>
+                <a href="" class="block rounded-md px-3 py-2 text-base font-medium text-green-900 hover:bg-gray-700 hover:text-white">Contact</a>
+            
+            </div>
+            <button type="button" class="bg-white-500 text-green-900 py-2 px-4 text-sm font-medium ml-85 border border-green-900 rounded hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-green-500 focus: ring-opacity-50">Decouvrez nos produits</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Section 1 -->
+    <!-- Section avec fond vert -->
+    <section class="bg-green-200 py-12 ">
+        <div class="max-w-3xl mx-auto px-4 text-center ml-65 mr-30 mt-5">
+
+            <!-- Titre centré -->
+            <h2 class="text-4xl font-bold text-green-900 mb-8">SERVICES OFFERT</h2>
+
+            <!-- Grille d'images -->
+             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+
+                <!-- Image 1 (centrée sur la première ligne) -->
+                <div class="text-center">
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\CD.PNG" alt="Image 1" class="w-full h-30 object-cover rounded-lg mb-4">
+                    <p class="text-green-900">Collecte de déchets</p>
+                </div>
+
+                <!-- Image 2 (à gauche sur la deuxième ligne) -->
+                <div class="text-center">
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\LIVRAISON.PNG" alt="Image 2" class="w-full h-30 object-cover rounded-lg mb-4">
+                    <p class="text-green-900">Livraison</p>
+                </div>
+
+                <!-- Image 3 (à droite sur la deuxième ligne) -->
+                <div class="text-center">
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\formation.PNG" alt="Image 3" class="w-full h-30 object-cover rounded-lg mb-4">
+                    <p class="text-green-900">Formations</p>
+                </div>
+
+            </div>
+
+            <!-- Bouton centré -->
+            <div class="mt-8">
+                <a href="#" class="bg-white animate-pulse text-green-500 px-8 py-3 rounded-full font-semibold">En savoir plus</a>
+            </div>
+
+        </div>
+    </section>
+
+     <!-- Section 2 -->
+    <!-- Section avec fond vert -->
+    <section class="bg-green-300 py-12 ">
+        <div class="max-w-4xl mx-auto px-4 text-center ml-46 mr-30 mt-5">
+
+            <!-- Titre centré -->
+            <h2 class="text-3xl font-bold text-green-900 mb-8">VENTE DES PRODUITS ISSUS <br> DE LA METHANISATION DES DECHETS</h2>
+
+            <!-- Grille d'images -->
+             <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:grid-cols-3 justify-items-center ml-20 mr-20">
+
+                <!-- Image 1 (centrée sur la première ligne) -->
+                <div class="text-center">
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\EL.PNG" alt="Image 1" class="w-45 h-40 rounded-lg mb-4">
+                    <p class="text-green-900">Engrais Bio</p>
+                </div>
+
+                <!-- Image 2 (à gauche sur la deuxième ligne) -->
+                <div class="text-center">
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\GAZ1.PNG" alt="Image 2" class="w-45 h-40 object-cover rounded-lg mb-4">
+                    <p class="text-green-900">Biogaz</p>
+                </div>
+
+                <!-- Image 3 (à droite sur la deuxième ligne) -->
+                <div class="text-center">
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\EO.PNG" alt="Image 3" class="w-full h-40 object-cover rounded-lg mb-4">
+                    <p class="text-green-900">Engrais Bio</p>
+                </div>
+
+            </div>
+
+            <!-- Bouton centré -->
+            <div class="mt-8">
+                <a href="#" class="bg-white animate-pulse text-green-500 px-8 py-3 rounded-full font-semibold">En savoir plus</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section 3 -->
+    <!-- Section avec fond vert -->
+    <section class="bg-green-400 py-12 pb-22">
+        <div class="max-w-3xl mx-auto px-4 text-center">
+            <!-- Titre centré -->
+            <h2 class="text-3xl font-bold text-green-900 mt-2 mb-8">APPROVISIONNEMENT EN PRODUITS DERIVES DU BIOGAZ</h2>
+
+            <!-- Grille d'images -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+
+                <!-- Image 1 (centrée) -->
+                <div class="text-center">
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\CB.PNG" alt="Image 1" class="w-full h-64 object-cover rounded-lg mb-4">
+                    <p class="text-green-900">Carburant Bio</p>
+                </div>
+
+                <!-- Image 2 (centrée) -->
+                <div class="text-center">
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\electricité 2.PNG" alt="Image 2" class="w-full h-64 object-cover rounded-lg mb-4">
+                    <p class="text-green-900">Electricité</p>
+                </div>
+
+            </div>
+
+            <!-- Bouton centré -->
+            <div class="mt-8">
+                <a href="#" class="bg-white text-green-500 animate-pulse px-8 py-3 rounded-full font-semibold">En savoir plus</a>
+            </div>
+
+        </div>
+    </section>
+
+     <!-- Section Footer -->
+     <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-screen-xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-0">
+            <!-- Colonne 1: Logo -->
+            <div class="flex justify-center md:justify-items-stretch">
+                <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\foot.png" alt="Logo" class="w-40 h-30">
+            </div>
+    
+            <!-- Colonne 2: Textes centrés -->
+            <div class="text-center space-y-4">
+                <p>Qui sommes-nous?</p>
+                <p>Nous rejoindre</p>
+                <p>Offres d'emplois</p>
+                <p>Metiers</p>
+            </div>
+    
+            <!-- Colonne 3: Textes avec logos -->
+            <div class="space-y-4">
+                <!-- Première ligne avec logo à gauche et texte à droite -->
+                <div class="flex items-center">
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\A.png" alt="Logo" class="w-6 h-6 mr-2">
+                    <p class="flex-1">00237 691617351</p>
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\fb.png" alt="Logo" class="w-6 h-6 mr-40">
+                </div>
+                <!-- Deuxième ligne avec logo à gauche et texte à droite -->
+                <div class="flex items-center">
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\B.png" alt="Logo" class="w-6 h-6 mr-2">
+                    <p class="flex-1">contact@sgt.com</p>
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\B1.png" alt="Logo" class="w-6 h-6 ml-2 mr-40">
+                </div>
+                <!-- Troisième ligne avec logos à gauche et droite, texte centré -->
+                <div class="flex items-center">
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\C.png" alt="Logo" class="w-6 h-6 mr-2">
+                    <p class="flex-1">Douala-Cameroun</p>
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\C1.png" alt="Logo" class="w-6 h-6 ml-2 mr-40">
+                </div>
+                <!-- Quatrième ligne avec logos à gauche et droite, texte centré -->
+                <div class="flex items-center">
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\C.png" alt="Logo" class="w-6 h-6 mr-2">
+                    <p class="flex-1">YASSA</p>
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\ink.png" alt="Logo" class="w-6 h-6 ml-2 mr-40">
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
+

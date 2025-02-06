@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entête de GTS</title>
+    <link rel="stylesheet" href="/css/index.css">       <!--link with css file-->
+    <!-- Liens vers les fichiers CSS de Bootstrap -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body>
+
+    <header class="fixed bg-transparent z-30">
+        <nav class="">
+            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+                <div class="relative flex h-16 items-center justify-between">
+                    <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <!-- Mobile menu button-->
+                    <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="absolute -inset-0.5"></span>
+                        <span class="sr-only">Open main menu</span>
+                        <!--
+                        Icon when menu is closed.
+            
+                        Menu open: "hidden", Menu closed: "block"
+                        -->
+                        <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <!--
+                        Icon when menu is open.
+            
+                        Menu open: "block", Menu closed: "hidden"
+                        -->
+                        <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                    </div>
+                    <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+
+                        <!-- LOGO-->
+                    <div class="flex shrink-0 items-center">
+                        <img class="h-10 w-auto ml-20" src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\LOGO.png" alt="Your Company">
+                    </div>
+
+                    <!-- Nav bar-->
+                    <div class="hidden sm:ml-6 sm:block">
+                        <div class="flex space-x-4">
+
+                        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                        <a href="./index.html" class="rounded-md px-3 py-2 text-sm font-medium text-green-900 hover:bg-gray-700 hover:text-white">Accueil</a>
+                        <a href="./about.html" class="rounded-md px-3 py-2 text-sm font-medium text-red-900 hover:bg-gray-700 hover:text-white">A propos</a>
+                        <a href="./services.html" class="rounded-md px-3 py-2 text-sm font-medium text-green-900 hover:bg-gray-700 hover:text-white">Nos services</a>
+                        <a href="./contact.html" class="rounded-md px-3 py-2 text-sm font-medium text-green-900 hover:bg-gray-700 hover:text-white">Contact</a>
+                        </div>
+                    </div>
+                    </div>
+                    
+                        <!-- Bouton Decouvrez nos produits-->
+                    <div>
+                        <button type="button" class="bg-white-500 animate-pulse text-green-900 py-2 px-4 text-sm font-medium ml-85 border border-green-900 rounded hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-green-500 focus: ring-opacity-50">Decouvrez nos produits</button>
+                    </div>
+                    
+                    
+            
+                        <!--
+                        Dropdown menu, show/hide based on menu state.
+            
+                        Entering: "transition ease-out duration-100"
+                            From: "transform opacity-0 scale-95"
+                            To: "transform opacity-100 scale-100"
+                        Leaving: "transition ease-in duration-75"
+                            From: "transform opacity-100 scale-100"
+                            To: "transform opacity-0 scale-95"
+                        -->
+
+                </div>
+            </div>
+
+            
+        
+            <!-- Mobile menu, show/hide based on menu state. -->
+            <div class="sm:hidden" id="mobile-menu">
+            <div class="space-y-1 px-2 pt-2 pb-3">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-green-900 hover:bg-gray-700 hover:text-white">Accueil</a>
+                <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-green-900 hover:bg-gray-700 hover:text-white">A propos</a>
+                <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-green-900 hover:bg-gray-700 hover:text-white">Nos services</a>
+                <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-green-900 hover:bg-gray-700 hover:text-white">Contact</a>
+            
+            </div>
+            <button type="button" class="bg-white-500 text-green-900 py-2 px-4 text-sm font-medium ml-85 border border-green-900 rounded hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-green-500 focus: ring-opacity-50">Decouvrez nos produits</button>
+            </div>
+        </nav>
+    </header>
+
+
+<!-- Section 1 -->
+    <section class="bg-green-200 py-12">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <!-- Titre centré -->
+            <h2 class="text-3xl font-bold text-white mb-8">FONDATION DE LA GTS</h2>
+
+            <!-- Rectangles parallèles (sur trois lignes) -->
+            <div class="space-y-8">
+                <!-- Rectangle 1 -->
+                <div class="flex items-center bg-white p-6 rounded-lg shadow-lg">
+                    <!-- Titre vertical à gauche -->
+                    <h3 class="text-red-500 text-4xl font-semibold writing-mode-vertical-lr mr-4">MISSION</h3>
+                    <!-- Paragraphe à droite -->
+                    <p class="text-gray-700">Notre mission est de transformer les déchets organiques en ressources durables pour un avenir plus vert. En produisant du biogaz, des engrais biologiques, du carburant bio et de l’électricité, nous contribuons à la transition énergétique et à la réduction de l'empreinte carbone, tout en soutenant une économie circulaire et locale. Nous nous engageons à offrir des solutions écologiques innovantes qui améliorent la qualité de l'environnement et favorisent une gestion responsable des ressources.</p>
+                </div>
+
+                <!-- Rectangle 2 -->
+                <div class="flex items-center bg-white p-6 rounded-lg shadow-lg">
+                    <!-- Titre vertical à gauche -->
+                    <h3 class="text-red-500 text-4xl font-semibold writing-mode-vertical-lr mr-4">VISION</h3>
+                    <!-- Paragraphe à droite -->
+                    <p class="text-gray-700">Devenir un leader dans la production d'énergies renouvelables et de solutions agricoles durables en Europe, en étant reconnu pour notre innovation, notre expertise technique et notre engagement envers la préservation de la planète. Nous aspirons à créer un futur où les déchets sont transformés en ressources précieuses et où l'agriculture, l'énergie et l'industrie collaborent pour un développement économique respectueux de l'environnement.</p>
+                </div>
+
+                <!-- Rectangle 3 -->
+                <div class="flex items-center bg-white p-6 rounded-lg shadow-lg">
+                    <!-- Titre vertical à gauche -->
+                    <h3 class="text-red-500 text-4xl font-semibold writing-mode-vertical-lr mr-4">VALEURS</h3>
+                    <!-- Paragraphe à droite -->
+                    <p class="text-gray-700">Durabilité : Nous nous engageons à produire de l'énergie et des produits agricoles de manière à préserver les ressources naturelles pour les générations futures.
+                        Innovation : Nous recherchons continuellement des solutions nouvelles et efficaces pour optimiser la production de biogaz et autres ressources renouvelables.
+                        Respect de l'environnement : Nous priorisons des pratiques respectueuses de l'écosystème et réduisons notre empreinte écologique tout au long de notre chaîne de valeur.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section 2 -->
+    <!-- Section bleue marine avec images et texte -->
+    <section class="bg-green-300 py-12">
+        <div class="max-w-4xl mx-auto mt-20 px-4 text-center">
+
+            <!-- Conteneur des images -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Image 1 -->
+                <div class="flex flex-col items-center">
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\Z1.PNG" alt="Image 1" class="w-50 h-40 object-cover rounded-lg mb-4">
+                    <p class="text-gray-800">3 Pays et <br>3 Filiales</p>
+                </div>
+
+                <!-- Image 2 -->
+                <div class="flex flex-col items-center">
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\Z2.PNG" alt="Image 2" class="w-50 h-40  object-cover rounded-lg mb-4">
+                    <p class="text-gray-800">10 projets en Afrique <br> (alorisation du biogaz <br> et de ses dérivés) </p>
+                </div>
+
+                <!-- Image 3 -->
+                <div class="flex flex-col items-center">
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\Z3.PNG" alt="Image 3" class="w-50 h-40  object-cover rounded-lg mb-4">
+                    <p class="text-gray-800">Tonnes <br> d'émission de CO2 <br> évitées par an</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Section 3 -->
+     <!-- Section verte avec six rectangles parallèles -->
+     <section class="bg-green-400 py-12">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <!-- Titre de la section -->
+            <h2 class="text-3xl font-bold text-green-900 mb-8">TEAM DE LA GTS</h2>
+
+            <!-- Conteneur des rectangles -->
+            <div class="space-y-8">
+                <!-- Rectangle 1 -->
+                <div class="flex items-center bg-white p-6 rounded-lg shadow-md">
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\cv.PNG" alt="Image 1" class="w-32 h-32 object-cover rounded-lg mr-6">
+                    <div class="flex-1 text-left">
+                        <h3 class="text-xl font-semibold text-green-700">DIRECTEUR GENERAL</h3>
+                        <p class="text-gray-700 mb-4">Il est le leader stratégique de l'entreprise et supervise l'ensemble des opérations. le DG définit les visions à long terme de l'entreprise, prend les décisions stratégiques et assure la gestion des ressources humaines et financières.</p>
+                        <p class="text-gray-600">Yvan CARAMEL</p>
+                    </div>
+                </div>
+
+                <!-- Rectangle 2 -->
+                <div class="flex items-center bg-white p-6 rounded-lg shadow-md">
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\B1.jpg" alt="Image 2" class="w-32 h-32 object-cover rounded-lg mr-6">
+                    <div class="flex-1 text-left">
+                        <h3 class="text-xl font-semibold text-green-700">DIRECTEUR TECHNIQUE/ INGENIEUR EN CHEF</h3>
+                        <p class="text-gray-700 mb-4">Il gère les aspects techniques de la production de biogaz, d'engrais bio, et d'énergie. Il supervise la conception, la mise en place et l'entretien des installations de production, et garantit que la technologie utilisée est efficace et conforme aux normes environnementales.</p>
+                        <p class="text-gray-600">Dilane WHITE</p>
+                    </div>
+                </div>
+
+                <!-- Rectangle 3 -->
+                <div class="flex items-center bg-white p-6 rounded-lg shadow-md">
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\team1.jpg" alt="Image 3" class="w-32 h-32 object-cover rounded-lg mr-6">
+                    <div class="flex-1 text-left">
+                        <h3 class="text-xl font-semibold text-green-700">RESPONSABLE PRODUCTION</h3>
+                        <p class="text-gray-700 mb-4">Il supervise la production à partir des matières organiques et veille à ce que les installations fonctionnent de manière optimale pour garantir une production régulière et efficace.</p>
+                        <p class="text-gray-600">Salomon DUVAL</p>
+                    </div>
+                </div>
+
+                <!-- Rectangle 4 -->
+                <div class="flex items-center bg-white p-6 rounded-lg shadow-md">
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\B4.jpg" alt="Image 4" class="w-32 h-32 object-cover rounded-lg mr-6">
+                    <div class="flex-1 text-left">
+                        <h3 class="text-xl font-semibold text-green-700">RESPONSABLE DES ACHATS ET LOGISTIQUE</h3>
+                        <p class="text-gray-700 mb-4">Elle gère l"approvisionnement en matières premières necessaires à la production, telles que les déchets organiques, les cultures énergétiques, et coordonne la logistique pour assurer un approvisionnement régulier et rentable. </p>
+                        <p class="text-gray-600">Florianne BRIGHT</p>
+                    </div>
+                </div>
+
+                <!-- Rectangle 5 -->
+                <div class="flex items-center bg-white p-6 rounded-lg shadow-md">
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\B3.jpg" alt="Image 5" class="w-32 h-32 object-cover rounded-lg mr-6">
+                    <div class="flex-1 text-left">
+                        <h3 class="text-xl font-semibold text-green-700">RESPONSABLE MARKETING ET COMMERCIALISATION</h3>
+                        <p class="text-gray-700 mb-4">Elle developpe les stratégies pour la commercialisation du biogaz, de l'électricité, des engrais et carburants bio. Elle établit des partenariats avec des clients, des distributeurs, et s'assure que les produits trouvent leurs places sur le marché. </p>
+                        <p class="text-gray-600">Bonelle CLARK</p>
+                    </div>
+                </div>
+
+                <!-- Rectangle 6 -->
+                <div class="flex items-center bg-white p-6 rounded-lg shadow-md">
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\B2.jpg" alt="Image 6" class="w-32 h-32 object-cover rounded-lg mr-6">
+                    <div class="flex-1 text-left">
+                        <h3 class="text-xl font-semibold text-green-700">RESPONSABLE FINANCIER ET DES AFFAIRES REGLEMENTAIRES</h3>
+                        <p class="text-gray-700 mb-4">Il est chargé de la gestion des finances de l'entreprise, y compris la gestion des budgets, la planification des investissements, l'analyse des couts et la recherche de financement. Par ailleurs, il veille à ce que l'entreprise respecte les règlementations liées aux émissions de gaz à effet de serre, à la production d'énergie renouvelable.</p>
+                        <p class="text-gray-600">Frederick KEND</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Section Footer -->
+     <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-screen-xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-0">
+            <!-- Colonne 1: Logo -->
+            <div class="flex justify-center md:justify-items-stretch">
+                <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\foot.png" alt="Logo" class="w-40 h-30">
+            </div>
+    
+            <!-- Colonne 2: Textes centrés -->
+            <div class="text-center space-y-4">
+                <p>Qui sommes-nous?</p>
+                <p>Nous rejoindre</p>
+                <p>Offres d'emplois</p>
+                <p>Metiers</p>
+            </div>
+    
+            <!-- Colonne 3: Textes avec logos -->
+            <div class="space-y-4">
+                <!-- Première ligne avec logo à gauche et texte à droite -->
+                <div class="flex items-center">
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\A.png" alt="Logo" class="w-6 h-6 mr-2">
+                    <p class="flex-1">00237 691617351</p>
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\fb.png" alt="Logo" class="w-6 h-6 mr-40">
+                </div>
+                <!-- Deuxième ligne avec logo à gauche et texte à droite -->
+                <div class="flex items-center">
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\B.png" alt="Logo" class="w-6 h-6 mr-2">
+                    <p class="flex-1">contact@sgt.com</p>
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\B1.png" alt="Logo" class="w-6 h-6 ml-2 mr-40">
+                </div>
+                <!-- Troisième ligne avec logos à gauche et droite, texte centré -->
+                <div class="flex items-center">
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\C.png" alt="Logo" class="w-6 h-6 mr-2">
+                    <p class="flex-1">Douala-Cameroun</p>
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\C1.png" alt="Logo" class="w-6 h-6 ml-2 mr-40">
+                </div>
+                <!-- Quatrième ligne avec logos à gauche et droite, texte centré -->
+                <div class="flex items-center">
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\C.png" alt="Logo" class="w-6 h-6 mr-2">
+                    <p class="flex-1">YASSA</p>
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\ink.png" alt="Logo" class="w-6 h-6 ml-2 mr-40">
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
+
