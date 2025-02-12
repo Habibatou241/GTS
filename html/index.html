@@ -1,98 +1,88 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entête de GTS</title>
-    <link rel="stylesheet" href="/css/index.css">       <!--link with css file-->
-    <!-- Liens vers les fichiers CSS de Bootstrap -->
+    <link rel="stylesheet" href="/css/index.css"> <!-- link with css file -->
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
 </head>
+
 <body>
 
-    <header class="fixed bg-transparent z-30">
-        <nav class="">
+    <header class="fixed w-full bg-transparent z-30">
+        <nav>
             <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                 <div class="relative flex h-16 items-center justify-between">
-                    <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                    <!-- Mobile menu button-->
-                    <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset" aria-controls="mobile-menu" aria-expanded="false">
-                        <span class="absolute -inset-0.5"></span>
-                        <span class="sr-only">Open main menu</span>
-                        <!--
-                        Icon when menu is closed.
-            
-                        Menu open: "hidden", Menu closed: "block"
-                        -->
-                        <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                        </svg>
-                        <!--
-                        Icon when menu is open.
-            
-                        Menu open: "block", Menu closed: "hidden"
-                        -->
-                        <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                    </div>
-                    <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-
-                        <!-- LOGO-->
-                    <div class="flex shrink-0 items-center">
-                        <img class="h-10 w-auto ml-20" src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\LOGO.png" alt="Your Company">
+                    <!-- LOGO -->
+                    <div class="flex text-2xl md:text-3xl shrink-0 items-center justify-center sm:justify-start">
+                        <img class="h-10 w-auto ml-4" src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\LOGO.png" alt="Your Company">
                     </div>
 
-                    <!-- Nav bar-->
-                    <div class="hidden sm:ml-6 sm:block">
+                    <!-- Nav bar (visible on medium and larger screens)-->
+                    <div class="hidden md:flex sm:block">
                         <div class="flex space-x-4">
-
-                        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                        <a href="./index.html" class="rounded-md px-3 py-2 text-sm font-medium text-red-900 hover:bg-gray-700 hover:text-white">Accueil</a>
-                        <a href="./about.html" class="rounded-md px-3 py-2 text-sm font-medium text-green-900 hover:bg-gray-700 hover:text-white">A propos</a>
-                        <a href="./services.html" class="rounded-md px-3 py-2 text-sm font-medium text-green-900 hover:bg-gray-700 hover:text-white">Nos services</a>
-                        <a href="./contact.html" class="rounded-md px-3 py-2 text-sm font-medium text-green-900 hover:bg-gray-700 hover:text-white">Contact</a>
+                            <a href="./index.html" class="rounded-md px-3 py-2 text-sm font-medium text-red-900 hover:bg-gray-700 hover:text-white">Accueil</a>
+                            <a href="./about.html" class="rounded-md px-3 py-2 text-sm font-medium text-green-900 hover:bg-gray-700 hover:text-white">A propos</a>
+                            <a href="./services.html" class="rounded-md px-3 py-2 text-sm font-medium text-green-900 hover:bg-gray-700 hover:text-white">Nos services</a>
+                            <a href="./contact.html" class="rounded-md px-3 py-2 text-sm font-medium text-green-900 hover:bg-gray-700 hover:text-white">Contact</a>
                         </div>
                     </div>
-                    </div>
-                    
-                        <!-- Bouton Decouvrez nos produits-->
-                    <div>
-                        <button type="button" class="bg-white-500 animate-pulse text-green-900 py-2 px-4 text-sm font-medium ml-85 border border-green-900 rounded hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-green-500 focus: ring-opacity-50">Decouvrez nos produits</button>
-                    </div>
-                    
-                    
-            
-                        <!--
-                        Dropdown menu, show/hide based on menu state.
-            
-                        Entering: "transition ease-out duration-100"
-                            From: "transform opacity-0 scale-95"
-                            To: "transform opacity-100 scale-100"
-                        Leaving: "transition ease-in duration-75"
-                            From: "transform opacity-100 scale-100"
-                            To: "transform opacity-0 scale-95"
-                        -->
 
+                    <!-- Button and Hamburger Menu for larger and mobile screens-->
+                    <div class="flex items-center space-x-4 ml-auto">
+                        <!-- "Découvrez nos produits" button -->
+                        <a href="./services.html" class="bg-green-900 animate-pulse text-white py-2 px-4 text-xs sm:text-sm md:text-base font-medium border border-green-900 rounded hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-green-500 transition-all focus:ring-opacity-50">
+                            Découvrez nos produits
+                        </a>
+
+
+
+
+
+
+                        <!-- Mobile menu button (visible only on small screens) -->
+                        <button type="button" id="menu-button" class="inline-flex items-center justify-center p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-none focus:ring-inset md:hidden" aria-controls="mobile-menu" aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+                            <!-- Icon when menu is closed -->
+                            <svg class="block w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                            <!-- Icon when menu is open -->
+                            <svg class="hidden w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
 
-            
-        
-            <!-- Mobile menu, show/hide based on menu state. -->
-            <div class="sm:hidden" id="mobile-menu">
-            <div class="space-y-1 px-2 pt-2 pb-3">
-                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-green-900 hover:bg-gray-700 hover:text-white">Accueil</a>
-                <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-green-900 hover:bg-gray-700 hover:text-white">A propos</a>
-                <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-green-900 hover:bg-gray-700 hover:text-white">Nos services</a>
-                <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-green-900 hover:bg-gray-700 hover:text-white">Contact</a>
-            
+            <!-- Mobile menu, show/hide based on menu state -->
+            <div class="hidden flex-row md:hidden w-full bg-transparent " id="mobile-menu">
+                <div class="flex justify-around space-x-1 space-y-1 px-2 pt-2 pb-3">
+                    <a href="./index.html" class="block rounded-md px-1 py-1 text-xs sm:text-sm md:text-base font-medium text-red-900 hover:bg-gray-700 hover:text-white">Accueil</a>
+                    <a href="./about.html" class="block rounded-md px-1 py-1 text-xs sm:text-sm md:text-base font-medium text-green-900 hover:bg-gray-700 hover:text-white">A propos</a>
+                    <a href="./services.html" class="block rounded-md px-1 py-1 text-xs sm:text-sm md:text-base font-medium text-green-900 hover:bg-gray-700 hover:text-white">Nos services</a>
+                    <a href="./contact.html" class="block rounded-md px-1 py-1 text-xs sm:text-sm md:text-base font-medium text-green-900 hover:bg-gray-700 hover:text-white">Contact</a>
+                </div>
             </div>
-            <button type="button" class="bg-white-500 text-green-900 py-2 px-4 text-sm font-medium ml-85 border border-green-900 rounded hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-green-500 focus: ring-opacity-50">Decouvrez nos produits</button>
-            </div>
+
+            <!-- Mobile menu toggle script -->
+            <script>
+                // Script to show/hide mobile menu
+                document.getElementById('menu-button').addEventListener('click', function () {
+                    const menuMobile = document.getElementById('mobile-menu');
+                    menuMobile.classList.toggle('hidden');
+                    // Toggle the icon when the menu opens/closes
+                    const openIcon = document.querySelector('svg:nth-child(1)');
+                    const closeIcon = document.querySelector('svg:nth-child(2)');
+                    openIcon.classList.toggle('hidden');
+                    closeIcon.classList.toggle('hidden');
+                });
+            </script>
+
         </nav>
 
         <style>
@@ -115,301 +105,445 @@
         <div class="spiner"></div>
     </header>
 
-      <!-- Section 1 -->
-      <section class="relative w-full h-96 bg-cover bg-center object-cover" style="background-image: url(../assets/images/EV1.PNG);">
-        <div class="absolute inset-0 bg-black opacity-10"></div> <!-- Superposition semi-transparente -->
 
-        <div class="relative z-10 flex justify-center items-center h-full w-3/4">
-            <h1 class="animate-fadeIn text-green-900 ml-25 mr-50 text-4xl font-bold text-center">LA PRODUCTION D'UNE ENERGIE PLUS VERTE ET LA REDUCTION DE L'IMPACT DU METHANE SUR LE DEREGLEMENT CLIMATIQUE</h2>
-        </div>
-    </section>
-
-      <!-- Section 2 -->
-    <!-- Section avec fond vert clair -->
-    <section class="bg-green-200 py-12">
-        <!-- Titres centrés -->
-        <div class="text-center mb-8">
-            <h2 class="animate-slideIn text-4xl font-bold text-gray-800">PRODUCTION DU BIOMETHANE</h2>
-            <h3 class="text-2xl font-semibold text-gray-600 mt-4">Produire du biométhane, c'est transformer nos déchets en énergie.</h3>
-        </div>
-
-        <!-- Paragraphes alignés à gauche -->
-        <div class="max-w-3xl mx-auto px-4 mb-8">
-            <p class="animate-fadeIn text-left text-lg text-gray-700">
-                De multiples avantages!
-            </p>
-            <p class="animate-fadeIn text-left text-lg text-gray-700 mt-4">
-                La production de biométhane permet de donner une seconde vie à nos déchets tout en produisant une énergie renouvelable et locale.
-            </p>
-        </div>
-
-        <!-- Grille de cartes (3 cartes sur chaque ligne) -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-3xl mx-auto px-2">
-            <!-- Carte 1 -->
-            <div class="bg-white border border-black flex justify-center items-center flex-col rounded-lg shadow-md w-auto h-70 mt-5 mx-auto object-cover rounded-t-lg">
-                <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\A1.PNG" alt="Image 1" class=" w-25 h-auto">
-                <div class="p-4">
-                    <p class="text-gray-600 mt-2 text-center">Réduire le gaz à effet de serre</p>
-                </div>
-            </div>
-
-            <!-- Carte 2 -->
-            <div class="bg-white border border-black flex justify-center items-center flex-col rounded-lg shadow-md w-auto h-70 mt-5 mx-auto object-cover rounded-t-lg">
-                <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\A2.PNG" alt="Image 2" class=" w-25 h-auto">
-                <div class="p-4">
-                    <p class="text-gray-600 mt-2 text-center">Produire une énergie 100% renouvelable et s'affranchir des énergies fossiles</p>
-                </div>
-            </div>
-
-            <!-- Carte 3 -->
-            <div class="bg-white border border-black flex justify-center items-center flex-col rounded-lg shadow-md w-auto h-70 mt-5 mx-auto object-cover rounded-t-lg">
-                <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\A3.PNG" alt="Image 3" class=" w-25 h-auto">
-                <div class="p-4">
-                    <p class="text-gray-600 mt-2 text-center">Produire des engrais naturels</p>
-                </div>
-            </div>
-
-            <!-- Carte 4 -->
-            <div class="bg-white border border-black flex justify-center items-center flex-col rounded-lg shadow-md w-auto h-70 mt-5 mx-auto object-cover rounded-t-lg">
-                <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\A4.PNG" alt="Image 4" class=" w-25 h-auto">
-                <div class="p-4">
-                    <p class="text-gray-600 mt-2 text-center">Créer des emplois locaux non-délocalisables.</p>
-                </div>
-            </div>
-
-            <!-- Carte 5 -->
-            <div class="bg-white border border-black flex justify-center items-center flex-col rounded-lg shadow-md w-auto h-70 mt-5 mx-auto object-cover rounded-t-lg">
-                <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\A5.PNG" alt="Image 5" class=" w-25 h-auto">
-                <div class="p-4">
-                    <p class="text-gray-600 mt-2 text-center">Valoriser les déchets de tout type</p>
-                </div>
-            </div>
-
-            <!-- Carte 6 -->
-            <div class="bg-white border border-black flex justify-center items-center flex-col rounded-lg shadow-md w-auto h-70 mt-5 mx-auto object-cover rounded-t-lg">
-                <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\A6.PNG" alt="Image 6" class=" w-25 h-auto">
-                <div class="p-4">
-                    <p class="text-gray-600 mt-2 text-center">Soutenir les agriculteurs en créant une économie circulaire et locale</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Section 3 -->
-     <!-- Section avec fond vert foncé -->
-     <section class="bg-green-300 py-12">
-        <div class="max-w-4xl mx-auto px-4 text-center ml-50 mr-30">
-            <!-- Titre centré -->
-            <h2 class="text-3xl font-bold text-green-900 mb-8">Transformez vos déchets en solutions <br>énergétiques durables.</h2>
-
-            <!-- Contenu avec image à gauche et texte à droite -->
-            <div class="flex items-center justify-between space-x-8">
-                <!-- Image à gauche -->
-                <div class="flex-shrink-0 w-1/2">
-                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\L1.PNG" alt="Notre image" class="w-full h-auto object-cover rounded-lg shadow-lg">
-                </div>
-
-                <!-- Paragraphe à droite -->
-                <div class="w-1/2 text-left text-green-900">
-                    <p class="text-lg">
-                        Nous valorisons les déchets organiques pour produire du biogaz, de l'électricité, du carburant et du digestat, contribuant ainsi à un avenir plus vert et plus responsable.
-                        Avec notre technologie innovante, nous convertissons les ressources locales en énergie renouvelable et en fertilisant naturel. Rejoignez-nous dans la révolution énergétique et circulaire.
-                    </p>
-                </div>
-            </div>
-
-            <div class="mt-8">
-                <a href="#contact" class="inline-block animate-bounce px-8 py-3 bg-red-600 text-white font-semibold text-lg rounded-lg hover:bg-blue-700 transition duration-300">
-                    Contactez-nous
-                </a>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Section 4 -->
-    <!-- Section plus foncée avec titre et images -->
-    <section class="bg-green-400 py-12">
-        <div class="max-w-4xl mx-auto px-4 text-center ml-50 mr-30">
-            <!-- Titre centré -->
-            <h2 class="text-3xl font-bold text-green-900 mb-8">RESSOURCES</h2>
-
-            <!-- Grille d'images avec texte -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-
-                <!-- Image 1 -->
-                <div class="w-full h-full text-center">
-                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\RA1.PNG" alt="Image 1" class="w-full h-55 object-cover transition-transform duration-300 ease-in-out transform hover:scale-110 mb-4">
-                    <p class="text-green-900">Résidus de cultures agricoles</p>
-                </div>
-
-                <!-- Image 2 -->
-                <div class="text-center">
-                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\D1.PNG" alt="Image 2" class="w-full h-55 object-cover animate-zoomIn rounded-lg mb-4">
-                    <p class="text-green-900">Biodéchets des ménages</p>
-                </div>
-
-                <!-- Image 3 -->
-                <div class="text-center">
-                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\BD.PNG" alt="Image 3" class="w-full h-55 auto object-cover animate-zoomIn rounded-lg mb-4">
-                    <p class="text-green-900">Biodéchets des industriels</p>
-                </div>
-
-
-                <div class="col-span-3 flex justify-center gap-8 ml-40 mr-40">
-                <!-- Image 4 -->
-                    <div class="text-center">
-                        <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\BE.PNG" alt="Image 4" class="w-full h-55 object-cover animate-zoomIn rounded-lg mb-4">
-                        <p class="text-green-900">Boues des stations d'épuration</p>
-                    </div>
-
-                    <!-- Image 5 -->
-                    <div class="text-center">
-                        <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\ED.PNG" alt="Image 5" class="w-full h-55 object-cover animate-zoomIn rounded-lg mb-4">
-                        <p class="text-green-900">Effluents d'élevages et d'industries agroalimentaires</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 5 -->
-    <!-- Section avec fond vert foncé -->
-    <section class="bg-aqua-900 py-12">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <!-- Titre centré -->
-            <h2 class="text-3xl font-bold text-green mb-8">PROCESSUS</h2>
-
-            <!-- Image centrée -->
-            <div class="flex justify-center">
-                <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\PROCESSUS.PNG" alt="Notre image" class="w-full md:w-2/3 lg:w-1/2 h-auto rounded-lg">
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 6 -->
-    <!-- Section avec fond vert foncé -->
-    <section class="bg-green-800 py-12">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <!-- Titre centré -->
-            <h2 class="text-3xl font-bold text-white mb-8">PRODUITS FINIS</h2>
-
-            <!-- Grille d'images avec texte -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 ml-30 mr-30">
-
-                <!-- Image 1 -->
-                <div class="text-center">
-                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\biogaz.PNG" alt="Image 1" class="w-100 h-64 object-cover rounded-lg mb-4">
-                    <p class="text-white">BIOGAZ</p>
-                </div>
-
-                <!-- Image 2 -->
-                <div class="text-center">
-                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\joint.PNG" alt="Image 2" class="w-100 h-64 object-cover rounded-lg mb-4">
-                    <p class="text-white">ENGRAIS</p>
-                </div>
-
-                <!-- Image 3 -->
-                <div class="text-center">
-                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\CB.PNG" alt="Image 3" class="w-100 h-64 object-cover rounded-lg mb-4">
-                    <p class="text-white">CARBURANT</p>
-                </div>
-
-                <!-- Image 4 -->
-                <div class="text-center">
-                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\electricité 2.PNG" alt="Image 4" class="w-100 h-64 object-cover rounded-lg mb-4">
-                    <p class="text-white">ELECTRICITE</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Section 7 -->
-    <!-- Section avec fond vert foncé -->
-    <section class="bg-white py-12">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <!-- Titre centré -->
-            <h2 class="text-3xl font-bold text-green-900 mb-8">TEMOIGNAGES</h2>
-
-            <!-- Grille d'images avec texte -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 ml-30 mr-30">
-
-                <!-- Image 1 -->
-                <div class="text-center">
-                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\T1.PNG" alt="Image 1" class="w-70 h-64 object-cover rounded-lg mb-4">
-                </div>
-
-                <!-- Image 2 -->
-                <div class="text-center">
-                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\T2.PNG" alt="Image 2" class="w-70 h-64 object-cover rounded-lg mb-4">
-                </div>
-
-                <!-- Image 3 -->
-                <div class="text-center">
-                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\T3.PNG" alt="Image 3" class="w-70 h-64 object-cover rounded-lg mb-4">
-                </div>
-
-                <!-- Image 4 -->
-                <div class="text-center">
-                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\T4.PNG" alt="Image 4" class="w-70 h-64 object-cover rounded-lg mb-4">
-                </div>
-
-            </div>
-        </div>
-    </section>
-     
-
-    <!-- Section Footer -->
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="max-w-screen-xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-0">
-            <!-- Colonne 1: Logo -->
-            <div class="flex justify-center md:justify-items-stretch">
-                <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\foot.png" alt="Logo" class="w-40 h-30">
-            </div>
-    
-            <!-- Colonne 2: Textes centrés -->
-            <div class="text-center space-y-4">
-                <p>Qui sommes-nous?</p>
-                <p>Nous rejoindre</p>
-                <p>Offres d'emplois</p>
-                <p>Metiers</p>
-            </div>
-    
-            <!-- Colonne 3: Textes avec logos -->
-            <div class="space-y-4">
-                <!-- Première ligne avec logo à gauche et texte à droite -->
-                <div class="flex items-center">
-                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\A.png" alt="Logo" class="w-6 h-6 mr-2">
-                    <p class="flex-1">00237 691617351</p>
-                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\fb.png" alt="Logo" class="w-6 h-6 mr-40">
-                </div>
-                <!-- Deuxième ligne avec logo à gauche et texte à droite -->
-                <div class="flex items-center">
-                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\B.png" alt="Logo" class="w-6 h-6 mr-2">
-                    <p class="flex-1">contact@sgt.com</p>
-                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\B1.png" alt="Logo" class="w-6 h-6 ml-2 mr-40">
-                </div>
-                <!-- Troisième ligne avec logos à gauche et droite, texte centré -->
-                <div class="flex items-center">
-                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\C.png" alt="Logo" class="w-6 h-6 mr-2">
-                    <p class="flex-1">Douala-Cameroun</p>
-                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\C1.png" alt="Logo" class="w-6 h-6 ml-2 mr-40">
-                </div>
-                <!-- Quatrième ligne avec logos à gauche et droite, texte centré -->
-                <div class="flex items-center">
-                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\C.png" alt="Logo" class="w-6 h-6 mr-2">
-                    <p class="flex-1">YASSA</p>
-                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\ink.png" alt="Logo" class="w-6 h-6 ml-2 mr-40">
-                </div>
-                
-            </div>
-        </div>
-    </footer>
-
-
+    </header>
 </body>
+
 </html>
+
+<!-- Section 1 -->
+<section class="relative w-full h-96 bg-cover bg-center object-cover" style="background-image: url(../assets/images/EV1.PNG);">
+    <div class="absolute inset-0 bg-black opacity-30"></div> <!-- Semi-transparent overlay -->
+
+    <div class="relative z-10 flex justify-center items-center h-full px-2 w-3/4">
+        <h1 class="animate-fadeIn text-green-900 text-xl sm:text-2xl md:text-3xl lg:text-4xl  font-bold text-center">
+            LA PRODUCTION D'UNE ENERGIE PLUS <br> VERTE ET LA REDUCTION DE L'IMPACT <br> DU METHANE SUR LE DEREGLEMENT <br> CLIMATIQUE
+        </h1>
+    </div>
+</section>
+
+<!-- Section 2 -->
+<section class="bg-green-200 py-12">
+    <!-- Titres centrés -->
+    <div class="text-center mb-8 px-4">
+        <h2 class=" text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800">PRODUCTION DU BIOMETHANE</h2>
+        <h3 class="text-xl sm:text-2xl font-semibold text-gray-600 mt-4">Produire du biométhane, c'est transformer nos déchets en énergie.</h3>
+    </div>
+
+    <!-- Paragraphes alignés à gauche -->
+    <div class="max-w-3xl mx-auto px-4 mb-8">
+        <p class=" text-left text-lg text-gray-700">
+            De multiples avantages!
+        </p>
+        <p class=" text-left text-lg text-gray-700 mt-4">
+            La production de biométhane permet de donner une seconde vie à nos déchets tout en produisant une énergie renouvelable et locale.
+        </p>
+    </div>
+
+    <!-- Grille de cartes (1 carte sur mobile, 2 cartes sur tablettes, 3 cartes sur grands écrans) -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-3xl mx-auto px-2">
+        <!-- Carte 1 -->
+        <div class="bg-white border border-black flex justify-center items-center flex-col rounded-lg shadow-md w-auto h-70 mt-5 mx-auto object-cover rounded-t-lg">
+            <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\A1.PNG" alt="Image 1" class="w-25 h-auto">
+            <div class="p-4">
+                <p class="text-gray-600 mt-2 text-center">Réduire le gaz à effet de serre</p>
+            </div>
+        </div>
+
+        <!-- Carte 2 -->
+        <div class="bg-white border border-black flex justify-center items-center flex-col rounded-lg shadow-md w-auto h-70 mt-5 mx-auto object-cover rounded-t-lg">
+            <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\A2.PNG" alt="Image 2" class="w-25 h-auto">
+            <div class="p-4">
+                <p class="text-gray-600 mt-2 text-center">Produire une énergie 100% <br> renouvelable  et s'affranchir des <br> énergies fossiles</p>
+            </div>
+        </div>
+
+        <!-- Carte 3 -->
+        <div class="bg-white border border-black flex justify-center items-center flex-col rounded-lg shadow-md w-auto h-70 mt-5 mx-auto object-cover rounded-t-lg">
+            <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\A3.PNG" alt="Image 3" class="w-25 h-auto">
+            <div class="p-4">
+                <p class="text-gray-600 mt-2 text-center">Produire des engrais naturels</p>
+            </div>
+        </div>
+
+        <!-- Carte 4 -->
+        <div class="bg-white border border-black flex justify-center items-center flex-col rounded-lg shadow-md w-auto h-70 mt-5 mx-auto object-cover rounded-t-lg">
+            <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\A4.PNG" alt="Image 4" class="w-25 h-auto">
+            <div class="p-4">
+                <p class="text-gray-600 mt-2 text-center">Créer des emplois locaux non-<br> délocalisables.</p>
+            </div>
+        </div>
+
+        <!-- Carte 5 -->
+        <div class="bg-white border border-black flex justify-center items-center flex-col rounded-lg shadow-md w-auto h-70 mt-5 mx-auto object-cover rounded-t-lg">
+            <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\A5.PNG" alt="Image 5" class="w-25 h-auto">
+            <div class="p-4">
+                <p class="text-gray-600 mt-2 text-center">  Valoriser les déchets de tout   <br> type</p>
+            </div>
+        </div>
+
+        <!-- Carte 6 -->
+        <div class="bg-white border border-black flex justify-center items-center flex-col rounded-lg shadow-md w-auto h-70 mt-5 mx-auto object-cover rounded-t-lg">
+            <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\A6.PNG" alt="Image 6" class="w-25 h-auto">
+            <div class="p-4">
+                <p class="text-gray-600 mt-2 text-center">Soutenir les agriculteurs en <br> créant une économie <br> circulaire  et locale</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Section 3 -->
+<section class="bg-green-300 py-12">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+        <!-- Titre centré -->
+        <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-green-900 mb-8">Transformez vos déchets en solutions <br>énergétiques durables.</h2>
+
+        <!-- Contenu avec image à gauche et texte à droite -->
+        <div class="flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0 md:space-x-8">
+            <!-- Image à gauche -->
+            <div class="flex-shrink-0 w-full md:w-1/2">
+                <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\L1.PNG" alt="Notre image" class="w-full h-auto object-cover rounded-lg shadow-lg">
+            </div>
+
+            <!-- Paragraphe à droite -->
+            <div class="w-full md:w-1/2 text-left text-green-900">
+                <p class="text-lg">
+                    Nous valorisons les déchets organiques pour produire du biogaz, de l'électricité, du carburant et du digestat, contribuant ainsi à un avenir plus vert et plus responsable.
+                    Avec notre technologie innovante, nous convertissons les ressources locales en énergie renouvelable et en fertilisant naturel. Rejoignez-nous dans la révolution énergétique et circulaire.
+                </p>
+            </div>
+        </div>
+
+        <!-- Bouton Contact -->
+        <div class="mt-8">
+            <a href="./contact.html" class="inline-block animate-bounce px-8 py-3 bg-red-600 text-white font-semibold text-lg rounded-lg hover:bg-blue-700 transition duration-300">
+                Contactez-nous
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- Section 4 (with carousel) -->
+<section class="bg-green-400 py-12">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+        <!-- Title -->
+        <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-green-900 mb-8">RESSOURCES</h2>
+
+        <!-- Carousel Container -->
+        <div class="relative w-full overflow-hidden">
+            <!-- Carousel Images -->
+            <div id="carouselImages" class="flex transition-transform duration-500 ease-in-out">
+                <!-- Image 1 -->
+                <div class="w-full flex-shrink-0 flex flex-col justify-center items-center">
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\RA1.PNG" alt="Image 1" class="w-1/2 sm:w-1/3 lg:w-1/3 xl:w-1/3 h-auto rounded-lg object-cover">
+                    <p class="text-green-900 mt-4">Résidus de cultures agricoles</p>
+                </div>
+
+                <!-- Image 2 -->
+                <div class="w-full flex-shrink-0 flex flex-col justify-center items-center">
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\D1.PNG" alt="Image 2" class="w-1/2 sm:w-1/3 lg:w-1/3 xl:w-1/3 h-auto rounded-lg object-cover">
+                    <p class="text-green-900 mt-4">Biodéchets des ménages</p>
+                </div>
+
+                <!-- Image 3 -->
+                <div class="w-full flex-shrink-0 flex flex-col justify-center items-center">
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\BD.PNG" alt="Image 3" class="w-1/2 sm:w-1/3 lg:w-1/3 xl:w-1/3 h-auto rounded-lg object-cover">
+                    <p class="text-green-900 mt-4">Biodéchets des industriels</p>
+                </div>
+
+                <!-- Image 4 -->
+                <div class="w-full flex-shrink-0 flex flex-col justify-center items-center">
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\BE.PNG" alt="Image 4" class="w-1/2 sm:w-1/3 lg:w-1/3 xl:w-1/3 h-auto rounded-lg object-cover">
+                    <p class="text-green-900 mt-4">Boues des stations d'épuration</p>
+                </div>
+
+                <!-- Image 5 -->
+                <div class="w-full flex-shrink-0 flex flex-col justify-center items-center">
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\ED.PNG" alt="Image 5" class="w-1/2 sm:w-1/3 lg:w-1/3 xl:w-1/3 h-auto rounded-lg object-cover">
+                    <p class="text-green-900 mt-4">Effluents d'élevages et d'industries agroalimentaires</p>
+                </div>
+            </div>
+
+            <!-- Carousel Navigation (Prev/Next) -->
+            <button id="prevBtn" class="absolute left-0 sm:left-40 top-1/2 sm:top-1/3 transform -translate-y-1/2 px-4 py-2 text-white bg-green-600 rounded-full">
+                &#10094;
+            </button>
+            <button id="nextBtn" class="absolute right-0 sm:right-40 top-1/2 sm:top-1/3 transform -translate-y-1/2 px-4 py-2 text-white bg-green-600 rounded-full">
+                &#10095;
+            </button>
+        </div>
+    </div>
+</section>
+
+
+<!-- JavaScript for carousel functionality -->
+<script>
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const carouselImages = document.getElementById('carouselImages');
+    const totalImages = carouselImages.children.length; // 5 images
+    let currentIndex = 0;
+
+    // Function to move to the next image
+    function moveToNext() {
+        if (currentIndex < totalImages - 1) {
+            currentIndex++;
+        } else {
+            currentIndex = 0; // Reset to the first image
+        }
+        updateCarousel();
+    }
+
+    // Function to move to the previous image
+    function moveToPrev() {
+        if (currentIndex > 0) {
+            currentIndex--;
+        } else {
+            currentIndex = totalImages - 1; // Move to the last image
+        }
+        updateCarousel();
+    }
+
+    // Function to update carousel position
+    function updateCarousel() {
+        carouselImages.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    // Event listeners for buttons
+    nextBtn.addEventListener('click', moveToNext);
+    prevBtn.addEventListener('click', moveToPrev);
+
+   
+</script>
+
+<!-- Section 5 -->
+<section class="bg-white py-12">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+        <!-- Titre centré -->
+        <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-green mb-8">PROCESSUS</h2>
+
+        <!-- Image centrée -->
+        <div class="flex justify-center">
+            <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\PROCESSUS.PNG" alt="Notre image" class="w-full sm:w-3/4 md:w-2/3 lg:w-1/2 h-auto rounded-lg">
+        </div>
+    </div>
+</section>
+
+<!-- Section 6 (with carousel) -->
+<section class="bg-green-400 py-12">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+        <!-- Title -->
+        <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-green-900 mb-8">PRODUITS FINIS</h2>
+
+        <!-- Carousel Container -->
+        <div class="relative w-full overflow-hidden">
+            <!-- Carousel Images -->
+            <div id="carouselImages1" class="flex transition-transform duration-500 ease-in-out">
+                <!-- Image 1 -->
+                <div class="w-full flex-shrink-0 flex flex-col justify-center items-center">
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\biogaz.PNG" alt="Image 1" class="w-1/2 sm:w-1/3 lg:w-1/3 xl:w-1/3 h-auto rounded-lg object-cover">
+                    <p class="text-green-900 mt-4">BIOGAZ</p>
+                </div>
+
+                <!-- Image 2 -->
+                <div class="w-full flex-shrink-0 flex flex-col justify-center items-center">
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\joint.PNG" alt="Image 2" class="w-1/2 sm:w-1/3 lg:w-1/3 xl:w-1/3 h-auto rounded-lg object-cover">
+                    <p class="text-green-900 mt-4">ENGRAIS</p>
+                </div>
+
+                <!-- Image 3 -->
+                <div class="w-full flex-shrink-0 flex flex-col justify-center items-center">
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\CB.PNG" alt="Image 3" class="w-1/2 sm:w-1/3 lg:w-1/3 xl:w-1/3 h-auto rounded-lg object-cover">
+                    <p class="text-green-900 mt-4">CARBURANT</p>
+                </div>
+
+                <!-- Image 4 -->
+                <div class="w-full flex-shrink-0 flex flex-col justify-center items-center">
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\electricité 2.PNG" alt="Image 4" class="w-1/2 sm:w-1/3 lg:w-1/3 xl:w-1/3 h-auto rounded-lg object-cover">
+                    <p class="text-green-900 mt-4">ELECTRICITE</p>
+                </div>
+
+            </div>
+
+            <!-- Carousel Navigation (Prev/Next) -->
+            <button id="prevBtn1" class="absolute left-0 sm:left-40 top-1/2 sm:top-1/3 transform -translate-y-1/2 px-4 py-2 text-white bg-green-600 rounded-full">
+                &#10094;
+            </button>
+            <button id="nextBtn1" class="absolute right-0 sm:right-40 top-1/2 sm:top-1/3 transform -translate-y-1/2 px-4 py-2 text-white bg-green-600 rounded-full">
+                &#10095;
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- JavaScript for carousel functionality -->
+<script>
+    const prevBtn1 = document.getElementById('prevBtn1');
+    const nextBtn1 = document.getElementById('nextBtn1');
+    const carouselImages1 = document.getElementById('carouselImages1');
+    const totalImages1 = carouselImages1.children.length; // 4 images
+    let currentIndex1 = 0;
+
+    // Function to move to the next image
+    function moveToNext1() {
+        if (currentIndex1 < totalImages1 - 1) {
+            currentIndex1++;
+        } else {
+            currentIndex1 = 0; // Reset to the first image
+        }
+        updateCarousel1();
+    }
+
+    // Function to move to the previous image
+    function moveToPrev1() {
+        if (currentIndex1 > 0) {
+            currentIndex1--;
+        } else {
+            currentIndex1 = totalImages1 - 1; // Move to the last image
+        }
+        updateCarousel1();
+    }
+
+    // Function to update carousel position
+    function updateCarousel1() {
+        carouselImages1.style.transform = `translateX(-${currentIndex1 * 100}%)`;
+    }
+
+    // Event listeners for buttons
+    nextBtn1.addEventListener('click', moveToNext1);
+    prevBtn1.addEventListener('click', moveToPrev1);
+</script>
+
+
+<!-- Section 7 (with carousel) -->
+<section class="bg-white py-12">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+        <!-- Title -->
+        <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-green-900 mb-8">TEMOIGNAGES</h2>
+
+        <!-- Carousel Container -->
+        <div class="relative w-full overflow-hidden">
+            <!-- Carousel Images -->
+            <div id="carouselImages2" class="flex transition-transform duration-500 ease-in-out">
+                <!-- Image 1 -->
+                <div class="w-full flex-shrink-0 flex flex-col justify-center items-center">
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\T1.PNG" alt="Image 1" class="w-1/2 sm:w-1/3 lg:w-1/3 xl:w-1/3 h-auto rounded-lg object-cover">
+                </div>
+
+                <!-- Image 2 -->
+                <div class="w-full flex-shrink-0 flex flex-col justify-center items-center">
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\T2.PNG" alt="Image 2" class="w-1/2 sm:w-1/3 lg:w-1/3 xl:w-1/3 h-auto rounded-lg object-cover">
+                </div>
+
+                <!-- Image 3 -->
+                <div class="w-full flex-shrink-0 flex flex-col justify-center items-center">
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\T3.PNG" alt="Image 3" class="w-1/2 sm:w-1/3 lg:w-1/3 xl:w-1/3 h-auto rounded-lg object-cover">
+                </div>
+
+                <!-- Image 4 -->
+                <div class="w-full flex-shrink-0 flex flex-col justify-center items-center">
+                    <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\T4.PNG" alt="Image 4" class="w-1/2 sm:w-1/3 lg:w-1/3 xl:w-1/3 h-auto rounded-lg object-cover">
+                </div>
+            </div>
+
+            <!-- Carousel Navigation (Prev/Next) -->
+            <button id="prevBtn2" class="absolute left-0 sm:left-40 top-1/2 sm:top-1/3 transform -translate-y-1/2 px-4 py-2 text-white bg-green-600 rounded-full">
+                &#10094;
+            </button>
+            <button id="nextBtn2" class="absolute right-0 sm:right-40 top-1/2 sm:top-1/3 transform -translate-y-1/2 px-4 py-2 text-white bg-green-600 rounded-full">
+                &#10095;
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- JavaScript for carousel functionality -->
+<script>
+    // Get references to buttons and the carousel container
+    const prevBtn2 = document.getElementById('prevBtn2');
+    const nextBtn2 = document.getElementById('nextBtn2');
+    const carouselImages2 = document.getElementById('carouselImages2');
+    
+    // Get the total number of images in the carousel
+    const totalImages2 = carouselImages2.children.length; // 4 images
+    let currentIndex2 = 0;  // Start at the first image
+
+    // Function to move to the next image
+    function moveToNext2() {
+        if (currentIndex2 < totalImages2 - 1) {
+            currentIndex2++;
+        } else {
+            currentIndex2 = 0; // Reset to the first image when reaching the end
+        }
+        updateCarousel2();
+    }
+
+    // Function to move to the previous image
+    function moveToPrev2() {
+        if (currentIndex2 > 0) {
+            currentIndex2--;
+        } else {
+            currentIndex2 = totalImages2 - 1; // Move to the last image when reaching the start
+        }
+        updateCarousel2();
+    }
+
+    // Function to update carousel position based on current index
+    function updateCarousel2() {
+        carouselImages2.style.transform = `translateX(-${currentIndex2 * 100}%)`;
+    }
+
+    // Event listeners for the buttons
+    nextBtn2.addEventListener('click', moveToNext2);
+    prevBtn2.addEventListener('click', moveToPrev2);
+</script>
+
+
+<!-- Section Footer -->
+<footer class="bg-gray-800 text-white py-8">
+    <div class="max-w-screen-xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Colonne 1: Logo -->
+        <div class="flex justify-center md:justify-start">
+            <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\foot.png" alt="Logo" class="w-40 h-30">
+        </div>
+
+        <!-- Colonne 2: Textes centrés -->
+        <div class="text-center space-y-4">
+            <p class="text-sm md:text-base">Qui sommes-nous?</p>
+            <p class="text-sm md:text-base">Nous rejoindre</p>
+            <p class="text-sm md:text-base">Offres d'emplois</p>
+            <p class="text-sm md:text-base">Metiers</p>
+        </div>
+
+        <!-- Colonne 3: Textes avec logos -->
+        <div class="space-y-4">
+            <!-- Première ligne avec logo à gauche et texte à droite -->
+            <div class="flex items-center justify-between sm:justify-start">
+                <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\A.png" alt="Logo" class="w-6 h-6 mr-2">
+                <p class="flex-1 text-sm md:text-base">00237 691617351</p>
+                <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\fb.png" alt="Logo" class="w-6 h-6 ml-2">
+            </div>
+            <!-- Deuxième ligne avec logo à gauche et texte à droite -->
+            <div class="flex items-center justify-between sm:justify-start">
+                <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\B.png" alt="Logo" class="w-6 h-6 mr-2">
+                <p class="flex-1 text-sm md:text-base">contact@sgt.com</p>
+                <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\B1.png" alt="Logo" class="w-6 h-6 ml-2">
+            </div>
+            <!-- Troisième ligne avec logos à gauche et droite, texte centré -->
+            <div class="flex items-center justify-between sm:justify-start">
+                <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\C.png" alt="Logo" class="w-6 h-6 mr-2">
+                <p class="flex-1 text-sm md:text-base">Douala-Cameroun</p>
+                <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\C1.png" alt="Logo" class="w-6 h-6 ml-2">
+            </div>
+            <!-- Quatrième ligne avec logos à gauche et droite, texte centré -->
+            <div class="flex items-center justify-between sm:justify-start">
+                <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\C.png" alt="Logo" class="w-6 h-6 mr-2">
+                <p class="flex-1 text-sm md:text-base">YASSA</p>
+                <img src="C:\Users\HP ELITEBOOK 1030 G2\Desktop\GTS assignment\assets\images\ink.png" alt="Logo" class="w-6 h-6 ml-2">
+            </div>
+        </div>
+    </div>
+</footer>
